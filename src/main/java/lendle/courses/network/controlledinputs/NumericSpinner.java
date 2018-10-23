@@ -36,6 +36,7 @@ public class NumericSpinner {
         model.setValue(100);
         model.setStepSize(10);
         spinner.setModel(model);
+       ((JSpinner.DefaultEditor)spinner.getEditor()).getTextField().setEditable(false);
         
         ///////////////////////////////////////////////////
         frame.add(spinner);
