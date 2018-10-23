@@ -5,10 +5,12 @@
  */
 package lendle.courses.network.controlledinputs;
 
+import com.sun.org.apache.xalan.internal.xsltc.compiler.util.StringStack;
 import java.awt.BorderLayout;
 import java.awt.FlowLayout;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
+import javax.swing.JList;
 import javax.swing.JScrollPane;
 import javax.swing.WindowConstants;
 
@@ -28,9 +30,13 @@ public class Combobox1 {
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
         //create JComboBox and add 0~99 to the combobox
-        
-        ///////////////////////////////////////////////
-        
+        JComboBox<String> comboBox = new JComboBox<String>();
+        for(int i=0; i<=99; i++)
+        {
+            comboBox.addItem(""+i);
+        }
+       
+        frame.add(comboBox);
         frame.setVisible(true);
     }
     
